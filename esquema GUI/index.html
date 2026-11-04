@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal - Registro de Vehículos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+        <script src="script.js"></script>ç
+
+    <!-- BARRA SUPERIOR -->
+    <header class="navbar-top">
+        <div class="nav-left">
+            <span class="orden-title">Sistema de Gestión - Menú Principal</span>
+        </div>
+        <div class="nav-right">
+            <i class="bx bx-bell nav-btn"></i>
+            <i class="bx bx-cog nav-btn"></i>
+            <div class="mecanico-box">
+                <i class="bx bx-user-circle"></i> Lautaro Marchant
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="contenedor-menu-principal">
+        
+        <!-- BARRA DE BÚSQUEDA Y FILTROS -->
+        <section class="seccion-busqueda">
+            <div class="search-box">
+                <i class="bx bx-search icon-search"></i>
+                <input type="text" id="inputBuscar" placeholder="Buscar vehículo por patente (ej: AA 000 AA / AAA 000) o nombre del cliente...">
+            </div>
+            <button class="btn-nuevo-registro">+ Nueva Orden</button>
+        </section>
+
+        <!-- LISTA DE VEHÍCULOS EN BASE DE DATOS -->
+        <section class="seccion-lista">
+            <h2 class="label-title">Vehículos Registrados</h2>
+
+            <div class="contenedor-cards-vehiculos">
+                
+                <!-- felipe gonzalez -->
+                <article class="card-cliente" data-target="detalle.html">
+                    <div class="card-cliente-header">
+                            <span class="patente-badge">AB 123 CD</span>
+                            <span class="tag-badge tag-pendiente">En Proceso</span>
+                    </div>
+                    <div class="card-cliente-body">
+                        <h3><i class="bx bx-user"></i> Felipe Gonzalez</h3>
+                        <p class="vehiculo-sub"><i class="bx bx-car"></i> Ford Explorer - 2021 (Gris)</p>
+                        <div class="info-meta">
+                            <span><strong>Service:</strong> Cambio de aceite</span>
+                            <span><strong>Fecha:</strong> 28 SEPT 2023</span>
+                        </div>
+                    </div>
+                    <div class="card-cliente-footer">
+                        <span class="mecanico-tag"><i class="bx bx-wrench"></i> Mecánico: Lautaro Marchant</span>
+                        <span class="monto-total">$ 66.878</span>
+                     </div>
+                </article>
+                
+                <!-- jorge mendez -->
+                <article class="card-cliente" data-target="index.html">
+                    <div class="card-cliente-header">
+                        <span class="patente-badge">AKB 069</span>
+                        <span class="tag-badge tag-listo">Terminado</span>
+                    </div>
+                    <div class="card-cliente-body">
+                        <h3><i class="bx bx-user"></i> Jorge Mendez</h3>
+                        <p class="vehiculo-sub"><i class="bx bx-car"></i> Chevrolet Corsa - 1998 (blanco)</p>
+                        <div class="info-meta">
+                            <span><strong>Falla:</strong> Cambio de aros</span>
+                            <span><strong>Fecha:</strong> 15 OCT 2026</span>
+                        </div>
+                    </div>
+                    <div class="card-cliente-footer">
+                        <span class="mecanico-tag"><i class="bx bx-wrench"></i> Mecánico: Juan Riquelme</span>
+                        <span class="monto-total">$ 56.200</span>
+                    </div>
+                </article>
+
+                <!-- maria torres -->
+                <article class="card-cliente" data-target="index.html">
+                    <div class="card-cliente-header">
+                        <span class="patente-badge">AC 789 EF</span>
+                        <span class="tag-badge tag-espera">En Espera</span>
+                    </div>
+                    <div class="card-cliente-body">
+                        <h3><i class="bx bx-user"></i> Maria Torres</h3>
+                        <p class="vehiculo-sub"><i class="bx bx-car"></i> Toyota RAV4 - 2022 (Negro)</p>
+                        <div class="info-meta">
+                            <span><strong>Falla:</strong> Ruido en frenos traseros</span>
+                            <span><strong>Fecha:</strong> 29 SEPT 2023</span>
+                        </div>
+                    </div>
+                    <div class="card-cliente-footer">
+                        <span class="mecanico-tag"><i class="bx bx-wrench"></i> Mecánico: Jose Hernandez</span>
+                        <span class="monto-total">$ 35.000</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

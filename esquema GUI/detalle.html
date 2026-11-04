@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orden de Trabajo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar-top">
+        <div class="nav-left">
+            <a href="index.html" style="color: white; text-decoration: none;">
+                <i class="bx bx-chevron-left back-icon"></i>
+            </a>
+            
+            <div class="fecha-box">
+                <span>28 SEPT 2023 <i class="bx bx-chevron-right"></i> 29 SEPT 2023</span>
+                <small>10:10 PM</small>
+            </div>
+
+            <div class="hora-box">
+                <i class="bx bx-time-five"></i> <span>15</span> <span>00</span>
+            </div>
+
+            <div class="mecanico-box">
+                <i class="bx bx-user-voice"></i> Lautaro Marchant
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <i class="bx bx-calendar-edit nav-btn"></i>
+            <span class="tag-badge tag-pendiente">En Proceso</span>
+            <i class="bx bx-dots-horizontal-rounded nav-btn"></i>
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
+        
+        <!-- columna izquierda -->
+        <section class="columna columna-izquierda">
+            <div class="cliente-header">
+                <h2><i class="bx bx-user"></i> Felipe Gonzalez</h2>
+            </div>
+
+            <div class="seccion-bloque">
+                <div class="bloque-header">
+                    <label class="label-title">SERVICE O REPARACIÓN</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="tipo" > REPARACION</label>
+                        <label><input type="radio" name="tipo" checked> SERVICE</label>
+                    </div>
+                </div>
+                <div class="input-box-row">
+                    <div class="search-box">
+                        <i class="bx bx-search icon-search"></i>
+                        <input type="text" id="inputBuscar" placeholder="Agregar servicio o repuesto (ejemplo: cambio de aceite / filtro de aire)">
+                    </div>
+                    <i class="bx bx-plus-circle icon-add"></i>
+                </div>
+            </div>
+
+            <!-- Servicio o Producto -->
+            <div class="seccion-bloque tabla-servicios">
+                <div class="tabla-header-labels">
+                    <span class="col-main">SERVICIO O REPUESTO</span>
+                    <span class="col-num">CANT</span>
+                    <span class="col-num">PRECIO</span>
+                    <span class="col-num">TOTAL</span>
+                    <span class="col-action"><i class="bx bx-folder"></i></span>
+                </div>
+
+                <div class="tabla-fila">
+                    <span class="col-main"><strong>Aceite Mobil 1 5W30</strong> <i class="bx bx-info-circle info-icon"></i></span>
+                    <span class="col-num">3</span>
+                    <span class="col-num">$13.900</span>
+                    <span class="col-num"></span>
+                    <span class="col-num"><strong>$41.700</strong></span>
+                    <span class="col-action">
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                        <i class="bx bx-minus-circle icon-delete"></i>
+                    </span>
+                </div>
+
+                <div class="tabla-fila">
+                    <span class="col-main"><strong>Cambio de aceite</strong></span>
+                    <span class="col-num">-</span>
+                    <span class="col-num">$14.500</span>
+                    <span class="col-num"></span>
+                    <span class="col-num"><strong>$14.500</strong></span>
+                    <span class="col-action">
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                        <i class="bx bx-minus-circle icon-delete"></i>
+                    </span>
+                </div>
+
+                <div class="btn-agregar-link">
+                    <strong>Agregar nuevo servicio o producto</strong> <i class="bx bx-search"></i>
+                </div>
+            </div>
+
+            <!-- Resumen de Costos -->
+            <div class="totales-footer">
+                <div class="total-item">
+                    <label>SUBTOTAL</label>
+                    <div class="total-box">$56.200</div>
+                </div>
+                <div class="total-item">
+                    <label>IMPUESTO INCLUÍDO</label>
+                    <div class="total-box">$ 10.678</div>
+                </div>
+                <div class="total-item">
+                    <label>TOTAL</label>
+                    <div class="total-box total-destacado">$ 66.878</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- columna derecha -->
+        <section class="columna columna-derecha">
+            <!-- pestañas -->
+            <nav class="tabs-nav">
+                <a href="#" class="tab-item active">Vehículo</a>
+                <a href="#" class="tab-item">Fotos</a>
+                <a href="#" class="tab-item">Notas</a>
+                <a href="#" class="tab-item">Informe</a>
+                <a href="#" class="tab-item">Tareas</a>
+                <a href="#" class="tab-item">Pago</a>
+            </nav>
+
+            <!-- card del vehiculo -->
+            <div class="card-vehiculo">
+                <div class="vehiculo-logo">
+                    <i class="bx bx-car"></i>
+                </div>
+                <div class="vehiculo-info">
+                    <h3>Ford Explorer</h3>
+                    <p>AB 123 CD</p>
+                    <p>2021 - Gris</p>
+                </div>
+                <div class="vehiculo-acciones">
+                    <span class="text-editar">Editar</span>
+                    <i class="bx bx-x icon-close"></i>
+                </div>
+            </div>
+
+            <!-- KILOMETRAJE Y COMBUSTIBLE -->
+            <div class="grid-2-cols">
+                <div class="input-box-row">
+                    <div class="search-box">
+                        <input type="text" id="inputKilometros" placeholder="Kilometraje...">
+                    </div>
+                </div>
+                <div>
+                    <label class="label-title">Nivel de combustible (aproximado)</label>
+                    <div class="combustible-bar">
+                        <span class="bar full"></span>
+                        <span class="bar full"></span>
+                        <span class="bar full"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="combustible-porcentaje">38%</span>
+                    </div>
+                    <div class="combustible-labels">
+                        <span>E</span><span>1/4</span><span>1/2</span><span>3/4</span><span>F</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ESTADO GENERAL -->
+            <div class="seccion-bloque">
+                <label class="label-title">Estado general del vehículo</label>
+                <div class="textarea-fake">Raya en puerta derecha delantera - abolladura en el guardabarros delantero izquierdo</div>
+            </div>
+
+            <!-- INVENTARIO DEL VEHÍCULO -->
+            <div class="inventario-seccion">
+                <label class="label-title">Inventario del vehículo</label>
+                <div class="inventario-grid">
+                    <label><input type="checkbox" checked> Crique</label>
+                    <label><input type="checkbox"> Alfombras</label>
+
+                    <label><input type="checkbox" checked> Matafuegos</label>
+                    <label><input type="checkbox"> Herramientas</label>
+                    <label><input type="checkbox" checked> Rueda de repuesto</label>
+
+                    <label><input type="checkbox" checked> Documentos</label>
+                    <label><input type="checkbox" checked> Llave 1</label>
+
+                    <label><input type="checkbox"> Cargador</label>
+                    <label><input type="checkbox"> Llave 2</label>
+                    <label><input type="checkbox"> Apoya celular</label>
+
+                    <label><input type="checkbox"> Otro..</label>
+                </div>
+            </div>
+
+            <!-- BOTÓN ACCIÓN FINAL -->
+            <div class="imprimir-container">
+                <button class="btn-imprimir">Imprimir orden</button>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
