@@ -4,13 +4,12 @@
 A partir del Diagrama de Entidad Relación DER realizado, se establece la siguiente estructura de tablas, claves primarias (PK) y claves foráneas (FK):
 
 * **CLIENTES** (<u>id_cliente</u> [PK], nombre, apellido, dni, telefono, email)
-* **MECANICOS** (id_mecanico [PK], nombre, apellido, dni, especialidad, telefono)
+* **MECANICOS** (id_mecanico [PK], nombre, apellido, dni, especialidad, telefono, email, usuario, contraseña)
 * **PROVEEDORES** (id_proveedor [PK], nombre_empresa, telefono, direccion, email)
-* **VEHICULOS** (<u>patente</u> [PK], marca, modelo, anio, id_cliente [FK -> CLIENTES.id_cliente])
-* **REPUESTOS** (<u>id_repuesto</u> [PK], nombre, precio_unitario, stock)
+* **VEHICULOS** (<u>patente</u> [PK], marca, modelo, anio, color, kilometraje, nivel_combustible, estado_general, inventario, fotos, id_cliente [FK -> CLIENTES.id_cliente])
+* **REPUESTOS** (<u>id_repuesto</u> [PK], id_proveedor [FK -> PROVEEDORES.id_proveedor], nombre, precio_unitario, stock)
 * **SERVICIOS** (id_servicio [PK], nombre, costo_base, descripcion)
-* **ORDENES_TRABAJO** (<u>id_orden</u> [PK], fecha_ingreso, diagnostico, estado, costo_mano_obra, total_facturado, patente [FK -> VEHICULOS.patente], id_servicio [FK -> SERVICIOS.id_servicio])
-* **DETALLES_ORDEN** (<u>id_detalle</u> [PK], cantidad, precio_aplicado, id_orden [FK -> ORDENES_TRABAJO.id_orden], id_repuesto [FK -> REPUESTOS.id_repuesto])
+* **ORDENES_TRABAJO** (<u>id_orden</u> [PK], patente [FK -> VEHICULOS.patente], id_mecanico [FK -> MECANICOS.id_mecanico], fecha_inicio, fecha_fin, id_repuesto [FK -> REPUESTOS.id_repuesto], id_servicio [FK -> SERVICIOS.id_servicio], notas_mecanico, costo_mano_obra, impuestos, total_facturado)
 
 ---
 
