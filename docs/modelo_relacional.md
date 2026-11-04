@@ -9,7 +9,7 @@ A partir del Diagrama de Entidad Relación DER realizado, se establece la siguie
 * **VEHICULOS** (<u>patente</u> [PK], marca, modelo, anio, color, kilometraje, nivel_combustible, estado_general, inventario, fotos, id_cliente [FK -> CLIENTES.id_cliente])
 * **REPUESTOS** (<u>id_repuesto</u> [PK], id_proveedor [FK -> PROVEEDORES.id_proveedor], nombre, precio_unitario, stock)
 * **SERVICIOS** (id_servicio [PK], nombre, costo_base, descripcion)
-* **ORDENES_TRABAJO** (<u>id_orden</u> [PK], patente [FK -> VEHICULOS.patente], id_mecanico [FK -> MECANICOS.id_mecanico], fecha_inicio, fecha_fin, id_repuesto [FK -> REPUESTOS.id_repuesto], id_servicio [FK -> SERVICIOS.id_servicio], notas_mecanico, costo_mano_obra, impuestos, total_facturado)
+* **ORDENES_TRABAJO** (<u>id_orden</u> [PK], patente [FK -> VEHICULOS.patente], id_mecanico [FK -> MECANICOS.id_mecanico], fecha_inicio, fecha_fin,estado, id_repuesto [FK -> REPUESTOS.id_repuesto], id_servicio [FK -> SERVICIOS.id_servicio], notas_mecanico, costo_mano_obra, impuestos, total_facturado)
 
 ---
 
